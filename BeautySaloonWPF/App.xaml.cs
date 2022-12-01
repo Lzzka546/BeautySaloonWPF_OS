@@ -13,5 +13,6 @@ namespace BeautySaloonWPF
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

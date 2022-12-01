@@ -7,22 +7,18 @@
         mc:Ignorable="d"
         Title="Салон красоты" Height="450" Width="800">
     <Grid>
-        <!--<ListView HorizontalAlignment="Center" Name="MainListView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Image Source="{Binding CategoryImage}"/>
-                        <TextBlock Text="{Binding CategoryTitle}"/>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-            <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top"></StackPanel>
-                </ItemsPanelTemplate>
-            </ListView.ItemsPanel>
-        </ListView>-->
-        <Frame x:Name="MainFrame"></Frame>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Image  Margin="5"/>
+        <TextBlock Text="{Binding ElementName=MainFrame, Path=Content.Title}"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock x:Name="FullnameTextBlock"></TextBlock>
+        </StackPanel>
+        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" x:Name="MainFrame" ContentRendered="MainFrame_ContentRendered" Navigated="MainFrame_Navigated"/>
+        <Button x:Name="BackButton" Grid.Row="2" HorizontalAlignment="Right" Click="BackButton_Click" Opacity="0.8"></Button>
     </Grid>
     
     

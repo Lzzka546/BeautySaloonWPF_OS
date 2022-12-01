@@ -24,5 +24,15 @@ namespace BeautySaloonWPF.View.Pages
         {
             InitializeComponent();
         }
+
+        private void SignInbutton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RegButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

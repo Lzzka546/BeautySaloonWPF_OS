@@ -28,5 +28,24 @@ namespace BeautySaloonWPF
             InitializeComponent();
             MainFrame.Navigate(new AutorizPage());
         }
+
+        private void MainFrame_ContentRendered(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Page currentPage = MainFrame.Content as Page;
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+        }
     }
 }
